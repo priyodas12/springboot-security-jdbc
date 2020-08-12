@@ -1,11 +1,17 @@
 INSERT INTO users(username,password,enabled)
-values ('user','pass123',true);
+values ('prod','pass123',true);
 
 INSERT INTO users(username,password,enabled)
-values ('admin','pass123',true);
+values ('dev','pass123',true);
+
+INSERT INTO users(username,password,enabled)
+values ('test','pass123',true);
 
 INSERT INTO authorities(username,authority)
-values ('user','ROLE_USER');
+values ('prod','ROLE_PROD');
 
 INSERT INTO authorities(username,authority)
-values ('admin','ROLE_ADMIN');
+values ('dev','ROLE_DEV');
+
+INSERT INTO authorities(username,authority)
+values ('test','ROLE_DEV');

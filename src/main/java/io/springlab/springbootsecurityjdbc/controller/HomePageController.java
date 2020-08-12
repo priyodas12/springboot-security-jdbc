@@ -12,16 +12,21 @@ public class HomePageController {
 
     @RequestMapping(method = RequestMethod.GET,value = "/")
     public String returnHomePageGeneric(){
-        return "Welcome Anonymous User\n"+new Date();
+        return "Welcome to common Env\n"+new Date();
     }
 
-    @RequestMapping(method = RequestMethod.GET,value = "/user")
-    public String returnHomePageUser(){
-        return "Welcome User\n"+new Date();
+    @RequestMapping(method = RequestMethod.GET,value = "/test")
+    public String returnHomePageTester(){
+        return "Welcome to Testing Env\n"+new Date();
     }
 
-    @RequestMapping(method = RequestMethod.GET,value = "/admin")
+    @RequestMapping(method = RequestMethod.GET,value = "/dev")
+    public String returnHomePageDeveloper(){
+        return "Welcome to Developing Env\n"+new Date();
+    }
+
+    @RequestMapping(method = RequestMethod.GET,value = "/prod")
     public String returnHomePageAdmin(){
-        return "Welcome Admin\n"+new Date();
+        return "Welcome to Production Env\n"+new Date();
     }
 }
